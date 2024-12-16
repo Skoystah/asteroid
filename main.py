@@ -49,6 +49,11 @@ def main():
                 print("Game over!")
                 return
 
+            for bullet in shots:
+                if bullet.collides(sprite):
+                    bullet.kill()
+                    sprite.split()
+
         for sprite in drawable:
             sprite.draw(screen)
 
